@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>{ifset title}{include title|striptags} | {/ifset}Nette Sandbox</title>
+	<title>{ifset title}{include title|striptags} | {/ifset}Got2do</title>
 
 	<link rel="stylesheet" href="{$basePath}/css/style.css">
 	<meta name="viewport" content="width=device-width">
@@ -15,6 +15,15 @@
 </head>
 
 <body>
+
+    <div id="header">
+        <a href="{plink Homepage:}">Users</a>
+    </div>
+    <div id="nav">
+        <a href="{plink Register:register}">Registrace</a>
+        <a href="{plink Sign:in}">Sign in</a>
+    </div>
+
 	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
 	{include content}
